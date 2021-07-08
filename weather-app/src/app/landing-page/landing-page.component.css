@@ -1,0 +1,78 @@
+.jumbotron {
+  text-align: center;
+}
+
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+  text-align: center;
+}
+
+.temp {
+  background-color: lightgray;
+  height: 100px;
+  text-align: center;
+}
+
+input {
+  width: 30rem;
+  height: 3.3rem;
+  font-size: 1.3rem;
+}
+
+.city {
+  background-color: #ffffffcf;
+  width: 55%;
+}
+
+.show-more{
+  color: rgb(0, 136, 255);
+  cursor: pointer;
+}
+
+.ion-android-search{
+  position: absolute;
+  top: 32%;
+  right: 37%;
+  font-size: 20px;
+  color:#419bf9;
+}
+
+.search-bar__action-btn {
+  position: relative;
+  width: 3.5em;
+}
+
+.search-bar__search-btn,
+.search-bar__clean-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.search-bar--hide {
+  opacity: 0;
+}
+
+.search-bar--hide {
+  z-index: -10;
+  opacity: 0;
+}
+
+.search-bar__clean-btn {
+  cursor: pointer;
+}
+
+.heading-app {
+  color: aliceblue;
+}
+
+.red-color {
+  color: red;
+}
+
+.blue-color {
+  color: blue;
+}

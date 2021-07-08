@@ -1,0 +1,45 @@
+<div class="fluid-container mb-3 land">
+  <div class="fluid-container fundo">
+    <div class="jumbotron jumbotron-fluid land-container" >
+      <div class="container">
+        <h1 class="display-4 heading-app" >WEATHER APP</h1>
+        <label>
+          <input
+            class="form-control"
+            type="text"
+            [formControl]="weatherForm"
+            (keyup.enter)="search($event)"
+            placeholder="Enter city name here"
+            autofocus
+          />
+        </label>
+      </div>
+      <div *ngIf="weather" class="card city mb-0">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-4 my-auto card-body">
+            <h2 class="card-subtitle mb-2">Temp: </h2>
+            <h2 class="card-subtitle mb-2 text-muted">{{ weather?.temp }}ºC</h2>
+          </div>
+          <div class="col-sm-4">
+            <h4 class="card-title">{{ weather?.name }}, {{ weather?.country }}</h4>
+            
+            <p class="card-text red-color" >Max: <b>{{ weather?.climate?.temp_max }} ºC</b></p>
+            <p class="card-text blue-color" >Min: <b>{{ weather?.climate?.temp_min }} ºC</b></p>
+          </div>
+          <br>
+          <div class="col-sm-4 my-auto ">
+            <h2 class="card-subtitle">WEATHER: </h2>
+            <i class=""><img src="https://openweathermap.org/img/w/{{weather?.climate?.icon}}.png" alt="icone climate"></i>
+            <p class="card-text">{{ weather?.climate?.description }}</p>
+          </div>
+        </div>
+      </div> 
+      <p (click)="showData()" class="show-more" ><span *ngIf="!hideMoreData" >Show more data</span><span *ngIf="hideMoreData">Hide data</span></p>
+      <div class="">
+        <app-city-page [wertherId]=weather.id *ngIf="hideMoreData"></app-city-page>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

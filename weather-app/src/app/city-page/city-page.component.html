@@ -1,0 +1,39 @@
+<div class="mb-1">
+  <div class="container list p-3">
+    <h3>5 hours weather forecast <small>every 3 hours</small></h3>
+
+    <div class="itens" *ngFor="let climate of list; let i = index">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-3">
+              <p>{{ climate.day }}</p>
+              <span>{{ climate.hour }}</span>
+            </div>
+            <div class="col-sm-3">
+              <i class=""
+                ><img
+                  src="https://openweathermap.org/img/w/{{ climate?.icon }}.png"
+                  alt="icone climate"
+                />
+              </i>
+            </div>
+            <div class="col-sm-2">
+              {{ climate.description | titlecase }}
+            </div>
+            <div class="col-sm-2">
+              <b
+                ><p class="red-color">Max: {{ climate.temp_max }} ºC</p>
+              </b>
+            </div>
+            <div class="col-sm-2">
+              <b
+                ><p class="blue-color">Min: {{ climate.temp_min }} ºC</p>
+              </b>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

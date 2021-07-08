@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+body {  
+  width: 100%;
+  height: 100%;
+  font-family:Courier New;
+  background: #fff;
+  background-image: url(./assets/img/288-2883620_thunderstorm-clouds.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #333;
+}
+
+.jumbotron {
+    background-color: transparent !important;
+}
+
+.land {
+  height: 100vh !important;
+}
+
+.land-container {
+  margin-bottom: 0px; 
+  padding-bottom: 0px;
+}
